@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#32DA9B</color><!--状态栏-->
     <color name="colorAccent">#FA7C20</color><!--设置类似checkbox的颜色-->
     <!--白天主题-->
-    <color name="day_backgroup_color">#FFFFFFFF</color>
+    <color name="day_background_color">#FFFFFFFF</color>
     <color name="day_one_text_color">#FF000000</color>
     <color name="day_two_text_color">#c9000000</color>
     <color name="day_three_text_color">#8A9599</color>
