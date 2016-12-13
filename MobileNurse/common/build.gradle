@@ -1,0 +1,93 @@
+//buildscript {
+//    dependencies {
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+//    }
+//}
+apply plugin: 'com.android.library'
+//apply plugin: 'com.jakewharton.butterknife'
+
+// 在library中使用butterknife的配置（https://github.com/JakeWharton/butterknife）
+//buildscript {
+//    dependencies {
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+//    }
+//}
+//apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+    }
+}
+
+
+ext {
+    isLibrary = true
+    pomArtifactId = "Common"
+    pomDescription = "Common of android picker"
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/Parse-1.9.4.jar')
+    compile files('libs/commons-codec-1.6.jar')//处理DES、SHA1、MD5、Base64等加密操作
+    compile files('libs/alipaySdk-20160516.jar')//支付宝SDK
+
+    compile 'com.android.support:support-v4:23.+'
+    compile 'com.android.support:recyclerview-v7:23.+'
+    compile 'com.android.support:support-annotations:23.+'
+    compile 'com.android.support:design:23.+'
+    compile 'com.android.support:cardview-v7:23.+'
+    compile 'com.android.support:appcompat-v7:23.+'
+
+    //butterknife
+//    compile 'com.jakewharton:butterknife:8.4.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //rxjava
+    compile 'io.reactivex:rxjava:1.0.1'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+
+    debugCompile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'//菜单栏
+    compile 'com.android.support:multidex:1.0.0'//分包
+    compile 'com.alibaba:fastjson:1.2.8'//json解析封装框架
+    compile 'com.commit451:PhotoView:1.2.4'//图片缩放
+    compile 'com.orhanobut:logger:1.13'//打印日志
+
+    compile 'com.github.bumptech.glide:glide:3.6.1'//显示图片框架
+    //图片选择、编辑库
+    compile 'cn.finalteam:galleryfinal:1.4.8.4'
+    //结合glide实现各种图片效果及毛玻璃效果
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+
+    compile 'com.jakewharton:butterknife:7.0.1'//view注解
+    compile 'com.github.clans:fab:1.6.4'//悬浮动画菜单
+    compile 'cn.hugeterry.updatefun:updatefun:1.8.6'//fire.im自动更新
+//    compile 'com.umeng.analytics:analytics:latest.integration'//友盟统计
+
+
+}
+
+
