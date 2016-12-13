@@ -1,18 +1,4 @@
-//buildscript {
-//    dependencies {
-//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
-//    }
-//}
 apply plugin: 'com.android.library'
-//apply plugin: 'com.jakewharton.butterknife'
-
-// 在library中使用butterknife的配置（https://github.com/JakeWharton/butterknife）
-//buildscript {
-//    dependencies {
-//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
-//    }
-//}
-//apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 25
@@ -86,9 +72,7 @@ dependencies {
     compile 'cn.hugeterry.updatefun:updatefun:1.8.6'
     //    compile 'com.umeng.analytics:analytics:latest.integration'//友盟统计
     //view注解
-    compile 'com.jakewharton:butterknife:7.0.1'
-    //    compile 'com.jakewharton:butterknife:8.4.0'
-    //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //    compile 'com.jakewharton:butterknife:7.0.1'
 
 }
 
